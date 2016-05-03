@@ -1,8 +1,8 @@
-# JamesBest
+# This new mobile test
 This is a James Project
 
-- James try to just put one porject here with all assets
-- you can make notes here
+- Try to just put one porject here with all assets
+
 
 #### This is 100% private me and you
 
