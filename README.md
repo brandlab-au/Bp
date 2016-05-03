@@ -1,10 +1,10 @@
 # This new mobile test
-This is a James Project
+ionic start conf sidemenu
 
-- Try to just put one porject here with all assets
-
-
-#### This is 100% private me and you
+- udated npm install -g ios-sim
 
 
-- It doesn't mater what if is java or Object c just note it here.
+#### This is test bed
+
+
+- https://www.coursera.org/learn/hybrid-mobile-development/lecture/3fD3n/exercise-video-setting-up-the-ionic-framework
