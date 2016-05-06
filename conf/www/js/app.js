@@ -61,7 +61,7 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
     })
 
   .state('app.dishdetails', {
-    url: '/dishdetails/:id',
+    url: '/menu/:id',
     views: {
       'mainContent': {
         templateUrl: 'templates/dishdetail.html',
