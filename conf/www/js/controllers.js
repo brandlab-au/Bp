@@ -176,11 +176,12 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
 
             }])
 
-.controller('AboutController', ['$scope', 'corporateFactory', function($scope, corporateFactory) {
-
+.controller('AboutController', ['$scope', 'corporateFactory','baseURL', function($scope, corporateFactory,baseURL) {
+            $scope.baseURL = baseURL;
+                $scope.leader = corporateFactory.get({id:3});
             $scope.leaders = corporateFactory.query();
             console.log($scope.leaders);
-
+            
             }])
 
 ;
