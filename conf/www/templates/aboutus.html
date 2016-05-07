@@ -12,40 +12,18 @@ The restaurant traces its humble beginnings to The Frying Pan, a successful chai
             </div>
         </div><!--- History card close ---->
   <div class="card">
-          <div class="item item-divider">
-            Meet our Culinary Specialists
-          </div>
-          <div class="item item-thumbnail-left item-text-wrap">
-               <img ng-src="{{baseURL+leader.image}}" alt="{{leader.name}}">
-                <h2>{{leader.name}}</h2>
-                <h4>{{leader.designation}}</h4>
-                <p>{{leader.description}}</p>
-          </div>
-      </div><!--- 3rd card close ---->
+        <div class="item item-divider">
+            Corporate Leadership
+        </div>
     <ion-list>
-      <ion-item ng-repeat="dish in leaders " href="#/app/menu/{{dish.id}}" class="item-thumbnail-left">
-        <img ng-src="{{baseURL+dish.image}}">
-        <h2>{{dish.name}}
-         
-        
-        <p>{{dish.description}}</p>
-      </ion-item>  
-<!--
-        
-             <div class="item item-divider">
-                   Coperate Leadership
-             </div>
--->
-            
-<!--               <img ng-src="{{baseURL+leader.image}}" alt="{{leader.name}}">-->
-<!--
-                <h2>{{leader.name}}<h2
-                 <h2>{{leader.designation}}</h2>
-                <p>{{leader.description}}</p>
--->
-          
-                 
-<!--      </ion-item>-->
-    </ion-list> <!--- leaders close ---->         
+      <ion-item ng-repeat="leader in leaders " href="#/app/menu/{{leader.id}}" >
+         <div class="item item-avatar item-text-wrap">
+          <img ng-src="{{baseURL+leader.image}}">
+        <h2>{{leader.name}}
+        <h2>{{leader.designation}}</h2>
+        <p>{{leader.description}}</p>
+          </div>
+       </ion-item>  
+  </ion-list> <!--- leaders close ---->         
 </ion-content>
 </ion-view>
