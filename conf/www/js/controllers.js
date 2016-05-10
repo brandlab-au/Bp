@@ -223,19 +223,30 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
             
             }])
 
-.controller('FavoritesController', ['$scope', 'menuFactory', 'favoriteFactory', 'baseURL', '$ionicListDelegate','$ionicPopup', function ($scope, menuFactory, favoriteFactory, baseURL, $ionicListDelegate,$ionicPopup) {
+.controller('FavoritesController', ['$scope', 'menuFactory', 'favoriteFactory', 'baseURL', '$ionicListDelegate','$ionicPopup','$ionicLoading', '$timeout' ,function ($scope, menuFactory, favoriteFactory, baseURL, $ionicListDelegate,$ionicPopup,$ionicLoading,$timeout) {
     
     $scope.baseURL = baseURL;
     $scope.shouldShowDelete = false;
+// add loading    
+     $ionicLoading.show({
+        template: '<ion-spinner></ion-spinner> Loading...'
+    });   
+    
 //JSobj[] methord getFav returns array with id's    
     $scope.favorites = favoriteFactory.getFavorites();  
 //contains all the dishes     
     $scope.dishes = menuFactory.getDishes().query(
         function (response) {
             $scope.dishes = response;
+            $timeout(function(){
+                $ionicLoading.hide();
+            },1000);
         },
         function (response) {
             $scope.message = "Error: " + response.status + " " + response.statusText;
+            $timeout(function(){
+                $ionicLoading.hide();}
+                ,1000);
         });
     console.log($scope.dishes, $scope.favorites);
     
@@ -247,7 +258,7 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
     $scope.deleteFavorite = function(index){    
         
         var confirmPopup = $ionicPopup.confirm({
-            title:'confi',
+            title:'confirm',
             template : 'are you sure ?'
            
         });
