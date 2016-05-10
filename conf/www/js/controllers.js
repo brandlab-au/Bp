@@ -223,7 +223,7 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
             
             }])
 
-.controller('FavoritesController', ['$scope', 'menuFactory', 'favoriteFactory', 'baseURL', '$ionicListDelegate', function ($scope, menuFactory, favoriteFactory, baseURL, $ionicListDelegate) {
+.controller('FavoritesController', ['$scope', 'menuFactory', 'favoriteFactory', 'baseURL', '$ionicListDelegate','$ionicPopup', function ($scope, menuFactory, favoriteFactory, baseURL, $ionicListDelegate,$ionicPopup) {
     
     $scope.baseURL = baseURL;
     $scope.shouldShowDelete = false;
@@ -244,11 +244,30 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
         console.log($scope.shouldShowDelete);
     };
     
-    $scope.deleteFavorite = function(index){
+    $scope.deleteFavorite = function(index){    
+        
+        var confirmPopup = $ionicPopup.confirm({
+            title:'confi',
+            template : 'are you sure ?'
+           
+        });
+        confirmPopup.then(function(res){
+            if (res){
+            console.log(' ok ');
+            favoriteFactory.deleteFromFavorites(index);
+            $scope.shouldShowDelete =false;
+                }else {
+                    console.log(' Cancel');
+                    }
+        });             
+                          
         favoriteFactory.deleteFromFavorites(index);
         $scope.shouldShowDelete =false;
-    }
-            }])
+        
+    }//cose deleteFavorite
+    
+}])//close to controller FavoritesController
+
 //custom filter for favorites.html
 .filter('favoriteFilter', function () {
     return function (dishes, favorites) {
