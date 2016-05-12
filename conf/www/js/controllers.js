@@ -157,11 +157,20 @@ $scope.reservation = {};
     };
 }])
 
-.controller('DishDetailController', ['$scope', '$stateParams','menuFactory','baseURL', function($scope, $stateParams, menuFactory,baseURL) {
+.controller('DishDetailController', ['$scope', '$stateParams','menuFactory','baseURL','$ionicPopup', function($scope, $stateParams, menuFactory,baseURL,$ionicPopup) {
     $scope.baseURL= baseURL;
     $scope.dish = {};
     $scope.showDish = false;
     $scope.message="Loading ...";
+    
+    $scope.popover = function(){
+    
+   var popover = $ionicPopup.confirm({
+            title:'confirm',
+            template : 'are you sure ?'
+           
+        });
+        };
 
     $scope.dish = menuFactory.getDishes().get({id:parseInt($stateParams.id,10)})
     .$promise.then(
