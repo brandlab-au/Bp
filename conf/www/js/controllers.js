@@ -191,24 +191,24 @@ $scope.reservation = {};
         $scope.closePopover = function() {
         $scope.popover.hide();
     };
-    
 //popover close 
     
-// here is comment update
+// Here is comment update
  $scope.mycomment = {rating:"", comment:"", author:"", date:""};
 
     $scope.submitComment = function () {
+        $scope.closePopover();
  console.log("pressed " +" "+$scope.mycomment.rating);
        $scope.mycomment.date = new Date().toISOString();
      console.log($scope.mycomment);
-//
+
        $scope.dish.comments.push($scope.mycomment);
 menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
-//
+
 //        $scope.commentForm.$setPristine();
-//
+
       $scope.mycomment = {rating:"", comment:"", author:"", date:""};
-//        
+       
          $scope.closeModal();
         
     };//close submit function    
@@ -218,7 +218,7 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
  $scope.addFavorite = function (index) {
                 console.log("index is " + index);
                 favoriteFactory.addToFavorites(index);
-                //$ionicListDelegate.closeOptionButtons();
+                $scope.closePopover();
             };
 
     
@@ -237,10 +237,13 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
 }])
 
 .controller('DishCommentController', ['$scope', 'menuFactory', function($scope,menuFactory) {
+    
+    
 
     $scope.mycomment = {rating:5, comment:"", author:"", date:""};
 
     $scope.submitComment = function () {
+        
 
         $scope.mycomment.date = new Date().toISOString();
         console.log($scope.mycomment);
