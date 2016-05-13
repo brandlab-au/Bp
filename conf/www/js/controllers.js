@@ -187,26 +187,31 @@ $scope.reservation = {};
   $scope.openPopover = function($event) {
     $scope.popover.show($event);
   };
-  $scope.closePopover = function() {
-    $scope.popover.hide();
-  };
+  
+        $scope.closePopover = function() {
+        $scope.popover.hide();
+    };
+    
 //popover close 
     
 // here is comment update
- $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+ $scope.mycomment = {rating:"", comment:"", author:"", date:""};
 
     $scope.submitComment = function () {
-
-        $scope.mycomment.date = new Date().toISOString();
-        console.log($scope.mycomment);
-
-        $scope.dish.comments.push($scope.mycomment);
+ console.log("pressed " +" "+$scope.mycomment.rating);
+       $scope.mycomment.date = new Date().toISOString();
+     console.log($scope.mycomment);
+//
+       $scope.dish.comments.push($scope.mycomment);
 menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
-
-        $scope.commentForm.$setPristine();
-
-        $scope.mycomment = {rating:5, comment:"", author:"", date:""};
-    }    
+//
+//        $scope.commentForm.$setPristine();
+//
+      $scope.mycomment = {rating:"", comment:"", author:"", date:""};
+//        
+         $scope.closeModal();
+        
+    };//close submit function    
 // comment update close    
     
 // Add to favorite used in opepopover  
