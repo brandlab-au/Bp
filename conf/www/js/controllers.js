@@ -157,14 +157,28 @@ $scope.reservation = {};
     };
 }])
 
-.controller('DishDetailController', ['$scope', '$stateParams','menuFactory','baseURL','$ionicPopover','favoriteFactory','$ionicListDelegate', function($scope, $stateParams, menuFactory,baseURL,$ionicPopover,favoriteFactory,$ionicListDelegate) {
+.controller('DishDetailController', ['$scope', '$stateParams','menuFactory','baseURL','$ionicPopover','favoriteFactory','$ionicModal', function($scope, $stateParams, menuFactory,baseURL,$ionicPopover,favoriteFactory,$ionicModal) {
     $scope.baseURL= baseURL;
     $scope.dish = {};
     $scope.showDish = false;
     $scope.message="Loading ...";
-//popover open  
     
- $ionicPopover.fromTemplateUrl('templates/dish-detail-popover.html', {
+// ion modal
+    $ionicModal.fromTemplateUrl('templates/dish-comment.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };// ion modal close
+    
+//popover open  
+    $ionicPopover.fromTemplateUrl('templates/dish-detail-popover.html', {
     scope: $scope
   }).then(function(popover) {
     $scope.popover = popover;
@@ -176,15 +190,32 @@ $scope.reservation = {};
   $scope.closePopover = function() {
     $scope.popover.hide();
   };
-//popover close  
-// add to fav    
+//popover close 
+    
+// here is comment update
+ $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+
+    $scope.submitComment = function () {
+
+        $scope.mycomment.date = new Date().toISOString();
+        console.log($scope.mycomment);
+
+        $scope.dish.comments.push($scope.mycomment);
+menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
+
+        $scope.commentForm.$setPristine();
+
+        $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+    }    
+// comment update close    
+    
+// Add to favorite used in opepopover  
  $scope.addFavorite = function (index) {
                 console.log("index is " + index);
                 favoriteFactory.addToFavorites(index);
                 //$ionicListDelegate.closeOptionButtons();
             };
-// test for comment  
-$scope.do =function(){window.alert("do")};
+
     
     $scope.dish = menuFactory.getDishes().get({id:parseInt($stateParams.id,10)})
     .$promise.then(
