@@ -1,10 +1,14 @@
-This is an addon starter template for the [Ionic Framework](http://ionicframework.com/).
+This angular.module('conFusion.controllers' [Ionic Framework]
 
-## How to use this template
+## This has side menu 
+* git log "commits"
+*Ionic --lib*. 
 
-*This template does not work on its own*. It is missing the Ionic library, and AngularJS.
+### See services ngResource
+angular.module('conFusion.services',['ngResource'])
+.constant("baseURL","http://localhost:3000/")
 
-To use this, either create a new ionic project using the ionic node.js utility, or copy and paste this into an existing Cordova project and download a release of Ionic separately.
+
 
 ### With the Ionic tool:
 
@@ -15,7 +19,7 @@ $ sudo npm install -g ionic cordova
 $ ionic start myApp sidemenu
 ```
 
-Then, to run it, cd into `myApp` and run:
+Then, to run it, cd into `conF` and run:
 
 ```bash
 $ ionic platform add ios
@@ -23,10 +27,8 @@ $ ionic build ios
 $ ionic emulate ios
 ```
 
-Substitute ios for android if not on a Mac, but if you can, the ios development toolchain is a lot easier to work with until you need to do anything custom to Android.
 
 ## Demo
 http://plnkr.co/edit/0RXSDB?p=preview
 
 ## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/contribute/#issues) to the main Ionic repository. On the other hand, pull requests are welcome here!

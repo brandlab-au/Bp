@@ -72,58 +72,59 @@ $scope.reservation = {};
   
 })    
 .controller('MenuController', ['$scope', 'menuFactory','favoriteFactory','baseURL','$ionicListDelegate', function($scope, menuFactory,favoriteFactory,baseURL,$ionicListDelegate) {
-            $scope.baseURL= baseURL;
-            $scope.tab = 1;
-            $scope.filtText = '';
-            $scope.showDetails = false;
-            $scope.showMenu = false;
-            $scope.message = "Loading ...";
-            
-            menuFactory.getDishes().query(
-                function(response) {
-                    $scope.dishes = response;
-                    $scope.showMenu = true;
-                },
-                function(response) {
-                    $scope.message = "Error: "+response.status + " " + response.statusText;
-                });
-
-                        
-            $scope.select = function(setTab) {
-                $scope.tab = setTab;
-                
-                if (setTab === 2) {
-                    $scope.filtText = "appetizer";
-                }
-                else if (setTab === 3) {
-                    $scope.filtText = "mains";
-                }
-                else if (setTab === 4) {
-                    $scope.filtText = "dessert";
-                }
-                else {
-                    $scope.filtText = "";
-                }
-            };
-
-            $scope.isSelected = function (checkTab) {
-                return ($scope.tab === checkTab);
-            };
+        $scope.baseURL= baseURL;
+        $scope.tab = 1;
+        $scope.filtText = '';
+        $scope.showDetails = false;
+        $scope.showMenu = false;
+        $scope.message = "Loading ...";
     
-            $scope.toggleDetails = function() {
-                $scope.showDetails = !$scope.showDetails;
-            };
-    
-            $scope.addFavorite = function (index) {
-                console.log("index is " + index);
-                favoriteFactory.addToFavorites(index);
-                $ionicListDelegate.closeOptionButtons();
-            };
-            
-            $scope.getFavorites = function (){
-              favoriteFactory.getFavorites(); 
-            };
-        }])
+
+ $scope.dishes = menuFactory.query(
+            function(response) {
+                $scope.dishes = response;
+                $scope.showMenu = true;
+            },
+            function(response) {
+                $scope.message = "Error: "+response.status + " " + response.statusText;
+            });
+
+
+        $scope.select = function(setTab) {
+            $scope.tab = setTab;
+
+            if (setTab === 2) {
+                $scope.filtText = "appetizer";
+            }
+            else if (setTab === 3) {
+                $scope.filtText = "mains";
+            }
+            else if (setTab === 4) {
+                $scope.filtText = "dessert";
+            }
+            else {
+                $scope.filtText = "";
+            }
+        };
+
+        $scope.isSelected = function (checkTab) {
+            return ($scope.tab === checkTab);
+        };
+
+        $scope.toggleDetails = function() {
+            $scope.showDetails = !$scope.showDetails;
+        };
+
+        $scope.addFavorite = function (index) {
+            console.log("index is " + index);
+            favoriteFactory.addToFavorites(index);
+            $ionicListDelegate.closeOptionButtons();
+        };
+
+        $scope.getFavorites = function (){
+          favoriteFactory.getFavorites(); 
+        };
+}])
 
 .controller('ContactController', ['$scope', function($scope) {
 
@@ -157,7 +158,7 @@ $scope.reservation = {};
     };
 }])
 
-.controller('DishDetailController', ['$scope', '$stateParams','menuFactory','baseURL','$ionicPopover','favoriteFactory','$ionicModal', function($scope, $stateParams, menuFactory,baseURL,$ionicPopover,favoriteFactory,$ionicModal) {
+.controller('DishDetailController', ['$scope','dish', '$stateParams','menuFactory','baseURL','$ionicPopover','favoriteFactory','$ionicModal', function($scope,dish,$stateParams, menuFactory,baseURL,$ionicPopover,favoriteFactory,$ionicModal) {
     $scope.baseURL= baseURL;
     $scope.dish = {};
     $scope.showDish = false;
@@ -184,13 +185,13 @@ $scope.reservation = {};
     $scope.popover = popover;
   });
 
-  $scope.openPopover = function($event) {
+    $scope.openPopover = function($event) {
     $scope.popover.show($event);
   };
   
-        $scope.closePopover = function() {
-        $scope.popover.hide();
-    };
+    $scope.closePopover = function() {
+    $scope.popover.hide();
+};
 //popover close 
     
 // Here is comment update
@@ -198,14 +199,14 @@ $scope.reservation = {};
 
     $scope.submitComment = function () {
         $scope.closePopover();
- console.log("pressed " +" "+$scope.mycomment.rating);
-       $scope.mycomment.date = new Date().toISOString();
-     console.log($scope.mycomment);
+console.log("pressed " +" "+$scope.mycomment.rating);
+        $scope.mycomment.date = new Date().toISOString();
+console.log($scope.mycomment);
 
        $scope.dish.comments.push($scope.mycomment);
-menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
+menuFactory.update({id:$scope.dish.id},$scope.dish);
 
-//        $scope.commentForm.$setPristine();
+//  $scope.commentForm.$setPristine();
 
       $scope.mycomment = {rating:"", comment:"", author:"", date:""};
        
@@ -220,51 +221,34 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
                 favoriteFactory.addToFavorites(index);
                 $scope.closePopover();
             };
-
     
-    $scope.dish = menuFactory.getDishes().get({id:parseInt($stateParams.id,10)})
-    .$promise.then(
-                    function(response){
-                        $scope.dish = response;
-                        $scope.showDish = true;
-                    },
-                    function(response) {
-                        $scope.message = "Error: "+response.status + " " + response.statusText;
-                    }
-    );
+$scope.dish = dish;
 
-
-}])
+}])//close of dishDetail controller
 
 .controller('DishCommentController', ['$scope', 'menuFactory', function($scope,menuFactory) {
     
-    
-
     $scope.mycomment = {rating:5, comment:"", author:"", date:""};
 
     $scope.submitComment = function () {
-        
+    $scope.mycomment.date = new Date().toISOString();
+    console.log($scope.mycomment);
 
-        $scope.mycomment.date = new Date().toISOString();
-        console.log($scope.mycomment);
-
-        $scope.dish.comments.push($scope.mycomment);
+    $scope.dish.comments.push($scope.mycomment);
 menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
 
-        $scope.commentForm.$setPristine();
+    $scope.commentForm.$setPristine();
 
-        $scope.mycomment = {rating:5, comment:"", author:"", date:""};
+    $scope.mycomment = {rating:5, comment:"", author:"", date:""};
     }
 }])
 
-// implement the IndexController and About Controller here
-
-.controller('IndexController', ['$scope', 'menuFactory','baseURL','corporateFactory', function($scope, menuFactory,baseURL, corporateFactory) {
+.controller('IndexController', ['$scope','promotionFactory', 'menuFactory','baseURL','corporateFactory', function($scope,promotionFactory, menuFactory,baseURL, corporateFactory) {
                 $scope.baseURL = baseURL;
                 $scope.leader = corporateFactory.get({id:3});
                 $scope.showDish = false;
                 $scope.message="Loading ...";
-                $scope.dish = menuFactory.getDishes().get({id:0})
+                $scope.dish = menuFactory.get({id:0})
                 .$promise.then(
                     function(response){
                         $scope.dish = response;
@@ -274,7 +258,7 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
                         $scope.message = "Error: "+response.status + " " + response.statusText;
                     }
                 );
-                $scope.promotion = menuFactory.getPromotion().get({id:0});
+                $scope.promotion = menuFactory.get({id:0});
 
             }])
 
@@ -285,31 +269,19 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
             
             }])
 
-.controller('FavoritesController', ['$scope', 'menuFactory', 'favoriteFactory', 'baseURL', '$ionicListDelegate','$ionicPopup','$ionicLoading', '$timeout' ,function ($scope, menuFactory, favoriteFactory, baseURL, $ionicListDelegate,$ionicPopup,$ionicLoading,$timeout) {
+.controller('FavoritesController', ['$scope', 'dishes','favorites', 'favoriteFactory', 'baseURL', '$ionicListDelegate','$ionicPopup','$ionicLoading', '$timeout' ,function ($scope, dishes, favorites , favoriteFactory, baseURL, $ionicListDelegate,$ionicPopup,$ionicLoading,$timeout) {
     
     $scope.baseURL = baseURL;
     $scope.shouldShowDelete = false;
 // add loading    
-     $ionicLoading.show({
-        template: '<ion-spinner></ion-spinner> Loading...'
-    });   
+//     $ionicLoading.show({
+//        template: '<ion-spinner></ion-spinner> Loading...'
+//    });   
     
 //JSobj[] methord getFav returns array with id's    
-    $scope.favorites = favoriteFactory.getFavorites();  
+    $scope.favorites = favorites;
 //contains all the dishes     
-    $scope.dishes = menuFactory.getDishes().query(
-        function (response) {
-            $scope.dishes = response;
-            $timeout(function(){
-                $ionicLoading.hide();
-            },1000);
-        },
-        function (response) {
-            $scope.message = "Error: " + response.status + " " + response.statusText;
-            $timeout(function(){
-                $ionicLoading.hide();}
-                ,1000);
-        });
+    $scope.dishes = dishes;
     console.log($scope.dishes, $scope.favorites);
     
     $scope.toggleDelete = function () {
