@@ -26,7 +26,7 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
             template:'<ion-spinner></ion-spinner> loading..'
         });
     });
-    
+// 'variabel name'    
     $rootScope.$on ('loading:hide',function(){
         $ionicLoading.hide();
     });
@@ -38,7 +38,7 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
     
     $rootScope.$on ('$stateChangeSuccess',function(){
         console.log('done');
-        $rootScope.$broadcast("loading:hide");
+        $rootScope.$broadcast('loading:hide');
     });
     
 })
