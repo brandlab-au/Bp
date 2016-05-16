@@ -274,8 +274,8 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
     $scope.baseURL = baseURL;
     $scope.shouldShowDelete = false;
 // add loading    
-//     $ionicLoading.show({
-//        template: '<ion-spinner></ion-spinner> Loading...'
+// $ionicLoading.show({
+// template: '<ion-spinner></ion-spinner> Loading...'
 //    });   
     
 //JSobj[] methord getFav returns array with id's    
