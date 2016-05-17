@@ -238,7 +238,7 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
     }
 }])
 
-.controller('IndexController', ['$scope','promotionFactory', 'menuFactory','baseURL','leader', function($scope,promotionFactory, menuFactory,baseURL, leader) {
+.controller('IndexController', ['$scope','promotion', 'menuFactory','baseURL','leader', function($scope,promotion, menuFactory,baseURL, leader) {
                 $scope.baseURL = baseURL;
                 $scope.leader = leader;
                 $scope.showDish = false;
@@ -253,7 +253,7 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
                         $scope.message = "Error: "+response.status + " " + response.statusText;
                     }
                 );
-                $scope.promotion = menuFactory.get({id:0});
+                $scope.promotion = promotion;
 
             }])
 

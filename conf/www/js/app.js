@@ -61,7 +61,11 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
         controller:'IndexController',
           resolve :{leader:['$stateParams','corporateFactory',function($stateParams,corporateFactory)
             {return corporateFactory.get({id:3});
-            }]}
+            }],
+            promotion:['$stateParams','promotionFactory',function($stateParams,promotionFactory){
+                return promotionFactory.get({id:0});
+            }]        
+                   }
       }
     }
   })
