@@ -2,6 +2,8 @@ This angular.module('conFusion.controllers' [Ionic Framework]
 
 ## This has side menu 
 * git log "commits"
+Data on json serve local
+- ionic serve --lab 
 *Ionic --lib*. 
 
 ### See services ngResource
