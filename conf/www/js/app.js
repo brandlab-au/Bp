@@ -83,7 +83,12 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
       views: {
         'mainContent': {
           templateUrl: 'templates/menu.html',
-          controller: 'MenuController'
+          controller: 'MenuController',
+            resolve :{dishes:[
+'$stateParams','menuFactory',function($stateParams,menuFactory){
+    return menuFactory.query();
+            }]
+        }
         }
       }
     })
