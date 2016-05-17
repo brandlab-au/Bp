@@ -1,5 +1,19 @@
 This angular.module('conFusion.controllers' [Ionic Framework]
 
+
+## localStorage
+- this is being called form app.js
+- line 136 = return favoriteFactory.getFavorites();
+
+- line 116 controller
+- $localStorage.storeObject('id','{index}');
+- line 51 services 
+- return $localStorage.getObject('id','{}');
+
+- line 280 controller something funny happening
+
+
+
 ## This has side menu 
 * git log "commits"
 Data on json serve local
