@@ -264,9 +264,9 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
 
             }])
 
-.controller('AboutController', ['$scope', 'corporateFactory','baseURL', function($scope, corporateFactory,baseURL) {
+.controller('AboutController', ['$scope', 'leaders','baseURL', function($scope,leaders,baseURL) {
             $scope.baseURL = baseURL;
-            $scope.leaders = corporateFactory.query();
+            $scope.leaders = leaders;
             console.log($scope.leaders);
             
             }])
