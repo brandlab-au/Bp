@@ -58,7 +58,10 @@ angular.module('conFusion', ['ionic', 'conFusion.controllers','conFusion.service
     views: {
       'mainContent': {
         templateUrl: 'templates/home.html',
-        controller:'IndexController'
+        controller:'IndexController',
+          resolve :{leader:['$stateParams','corporateFactory',function($stateParams,corporateFactory)
+            {return corporateFactory.get({id:3});
+            }]}
       }
     }
   })

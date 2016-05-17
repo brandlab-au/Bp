@@ -82,7 +82,7 @@ $scope.reservation = {};
         $scope.message = "Loading ...";
     
 
- $scope.dishes = dishes;
+        $scope.dishes = dishes;
 
 
         $scope.select = function(setTab) {
@@ -238,9 +238,9 @@ menuFactory.getDishes().update({id:$scope.dish.id},$scope.dish);
     }
 }])
 
-.controller('IndexController', ['$scope','promotionFactory', 'menuFactory','baseURL','corporateFactory', function($scope,promotionFactory, menuFactory,baseURL, corporateFactory) {
+.controller('IndexController', ['$scope','promotionFactory', 'menuFactory','baseURL','leader', function($scope,promotionFactory, menuFactory,baseURL, leader) {
                 $scope.baseURL = baseURL;
-                $scope.leader = corporateFactory.get({id:3});
+                $scope.leader = leader;
                 $scope.showDish = false;
                 $scope.message="Loading ...";
                 $scope.dish = menuFactory.get({id:0})
