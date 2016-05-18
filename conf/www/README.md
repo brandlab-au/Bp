@@ -2,13 +2,22 @@ This angular.module('conFusion.controllers' [Ionic Framework]
 
 
 ## localStorage
+- line 113 menuController addFavorite ->  favoriteFactory.addToFavorites(index);
+
 - this is being called form app.js
 - line 136 = return favoriteFactory.getFavorites();
 
+- services addToFavorites
+line 34 
+favFac.addToFavorites = function (index)
+
 - line 116 controller
 - $localStorage.storeObject('id','{index}');
-- line 51 services 
-- return $localStorage.getObject('id','{}');
+- line 51 services
+
+- $scope favorites = $localStorage.getObject('id','{}');
+above happens on line 16 controller.js and line 36 below
+$localStorage.storeObject('userinfo',$scope.loginData);
 
 - line 280 controller something funny happening
 
