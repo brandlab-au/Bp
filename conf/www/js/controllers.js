@@ -216,11 +216,7 @@ angular.module('conFusion.controllers', [])
             
             $scope.dish = dish;
                      
-            $ionicPopover.fromTemplateUrl('templates/dish-detail-popover.html', {
-                scope: $scope
-            }).then(function(popover) {
-                $scope.popover = popover;
-            });
+          
             
             $scope.showPopOver = function($event) {
                 
@@ -234,6 +230,8 @@ angular.module('conFusion.controllers', [])
                 $scope.popover.hide();
             };
             
+                            
+                                 
             // Create the Dish Comment modal that we will use later
             $ionicModal.fromTemplateUrl('templates/dish-comment.html', {
                     scope: $scope
@@ -267,6 +265,8 @@ angular.module('conFusion.controllers', [])
                 
                 $scope.mycomment = {rating:"", comment:"", author:"", date:""};
                 $scope.commentForm.hide();
+                $scope.closeModal();
+                $scope.closePopover();
              };
         }])
 
