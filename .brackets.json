@@ -1,0 +1,8 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/Jhon/GitHub/JamesBest/conf/plugins/cordova-plugin-splashscreen/src/blackberry10/index.js",
+        "/Users/Jhon/GitHub/JamesBest/conf/www/js/app.js",
+        "/Users/Jhon/GitHub/JamesBest/conf/www/js/controllers.js",
+        "/Users/Jhon/GitHub/JamesBest/conf/platforms/ios/build/emulator/HelloCordova.app/www/js/services.js"
+    ]
+}
