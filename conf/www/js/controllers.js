@@ -178,8 +178,25 @@ angular.module('conFusion.controllers', [])
             };
         }])
 
-.controller('DishDetailController', ['$scope', '$stateParams', 'dish', '$ionicPopover', '$ionicModal', 'menuFactory', 'favoriteFactory', 'baseURL', 
-                             function($scope, $stateParams, dish, $ionicPopover, $ionicModal, menuFactory, favoriteFactory, baseURL) {
+.controller('DishDetailController', ['$scope', '$stateParams', 'dish', '$ionicPopover', '$ionicModal', 'menuFactory', 'favoriteFactory', 'baseURL','$ionicPopover', 
+                             function($scope, $stateParams, dish, $ionicPopover, $ionicModal, menuFactory, favoriteFactory, baseURL,$ionicPopover) {
+                                 
+        //popover open  
+    
+         $ionicPopover.fromTemplateUrl('templates/dish-detail-popover.html', {
+            scope: $scope
+          }).then(function(popover) {
+            $scope.popover = popover;
+          });
+
+          $scope.openPopover = function($event) {
+            $scope.popover.show($event);
+          };
+          $scope.closePopover = function() {
+            $scope.popover.hide();
+          };
+        //popover close 
+                             
             
             $scope.baseURL = baseURL;
             
