@@ -1,5 +1,13 @@
 This angular.module('conFusion.controllers' [Ionic Framework]
 
+## ngCordova
+'$ionicPlatform', '$cordovaLocalNotification', '$cordovaToast',
+### See services ngResource
+angular.module('conFusion.services',['ngResource'])
+.constant("baseURL","http://localhost:3000/")
+### MenuController
+ - $scope.addFavorite -> services
+
 
 ## localStorage
 
@@ -13,11 +21,6 @@ $localStorage.storeObject('userinfo',$scope.loginData);
 Data on json serve local
 - ionic serve --lab 
 *Ionic --lib*. 
-
-### See services ngResource
-angular.module('conFusion.services',['ngResource'])
-.constant("baseURL","http://localhost:3000/")
-
 
 
 ### With the Ionic tool:
