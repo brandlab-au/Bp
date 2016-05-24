@@ -1,6 +1,6 @@
 angular.module('conFusion.controllers', [])
 
-.controller('AppCtrl', function ($scope, $ionicModal, $timeout, $localStorage, $ionicPlatform, $cordovaCamera) {
+.controller('AppCtrl', function ($scope,$ionicModal,$timeout, $localStorage,$ionicPlatform,$cordovaCamera,$cordovaImagePicker) {
     
      $scope.registration = {};
     // Create the registration modal that we will use later
@@ -40,9 +40,28 @@ angular.module('conFusion.controllers', [])
             });
 
             $scope.registerform.show();
-
-        };
-    });
+             
+        };//close takePicture
+        
+         var pickerOptions = {
+               maximumImagesCount: 10,
+               width: 800,
+               height: 800,
+               quality: 80
+              };
+        
+        $scope.getGalery = function(){
+            $cordovaImagePicker.getPictures(pickerOptions)
+                .then(function (results) {
+                  for (var i = 0; i < results.length; i++) {
+                    console.log('Image URI: ' + results[i]);
+                  }
+                }, function(error) {// error getting photos
+            });
+                  
+           };//close to getGalery() -> register.html
+    
+    });//close to ready
 
     // Perform the registration action when the user submits the registration form
     $scope.doRegister = function () {

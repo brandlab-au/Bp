@@ -9,6 +9,7 @@ angular.module('conFusion.services',['ngResource'])
  - $scope.addFavorite -> services
  
 ### DishDetailController needs add notif same as MeunCtr
+- line 308 added 
 - MenuController line 166 methord
 - addFavorite $scope.addFavorite Controller 
 - on dish-detail-popover.html -> favoriteFactory Line 304
