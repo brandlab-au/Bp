@@ -15,6 +15,10 @@ angular.module('conFusion.services',['ngResource'])
 - on dish-detail-popover.html -> favoriteFactory Line 304
 - favoriteFactory.addToFavorites
 
+### appCtrl()
+- getGalery() line 53
+- console.log('Image URI: ' + results[i]);
+- $scope.registration.imgSrc = 'Image URI: ' + results[i];
 
 ## localStorage
 

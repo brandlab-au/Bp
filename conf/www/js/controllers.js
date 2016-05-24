@@ -54,6 +54,7 @@ angular.module('conFusion.controllers', [])
             $cordovaImagePicker.getPictures(pickerOptions)
                 .then(function (results) {
                   for (var i = 0; i < results.length; i++) {
+                    $scope.registration.imgSrc = 'Image URI: ' + results[i];  
                     console.log('Image URI: ' + results[i]);
                   }
                 }, function(error) {// error getting photos
@@ -189,7 +190,7 @@ angular.module('conFusion.controllers', [])
                     title: "Added Favorite",
                     text: $scope.dishes[index].name
                 }).then(function () {
-                    console.log('Added Favorite '+$scope.dishes[index].name);
+                    console.log('Added Favorite '+$scope.dishes[index].name+);
                 },
                 function () {
                     console.log('Failed to add Notification ');
