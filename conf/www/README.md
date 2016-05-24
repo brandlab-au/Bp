@@ -7,6 +7,12 @@ angular.module('conFusion.services',['ngResource'])
 .constant("baseURL","http://localhost:3000/")
 ### MenuController
  - $scope.addFavorite -> services
+ 
+### DishDetailController needs add notif same as MeunCtr
+- MenuController line 166 methord
+- addFavorite $scope.addFavorite Controller 
+- on dish-detail-popover.html -> favoriteFactory Line 304
+- favoriteFactory.addToFavorites
 
 
 ## localStorage

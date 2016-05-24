@@ -254,8 +254,8 @@ angular.module('conFusion.controllers', [])
             };
         }])
 
-.controller('DishDetailController', ['$scope', '$stateParams', 'dish', '$ionicPopover', '$ionicModal', 'menuFactory', 'favoriteFactory', 'baseURL','$ionicPopover',
-                             function($scope, $stateParams, dish, $ionicPopover, $ionicModal, menuFactory, favoriteFactory, baseURL,$ionicPopover) {
+.controller('DishDetailController', ['$scope', '$stateParams', 'dish', '$ionicPopover', '$ionicModal', 'menuFactory', 'favoriteFactory', 'baseURL','$ionicPopover','$ionicPlatform', '$cordovaLocalNotification', '$cordovaToast',
+                             function($scope, $stateParams, dish, $ionicPopover, $ionicModal, menuFactory, favoriteFactory, baseURL,$ionicPopover,$ionicPlatform,$cordovaLocalNotification, $cordovaToast) {
            
         // ion modal
             $ionicModal.fromTemplateUrl('templates/dish-comment.html', {
@@ -304,7 +304,29 @@ angular.module('conFusion.controllers', [])
                 favoriteFactory.addToFavorites($scope.dish.id);
                 
                 $scope.popover.hide();
-            };
+                
+                $ionicPlatform.ready(function () {
+                $cordovaLocalNotification.schedule({
+                // jsObj here input into schedula methord    
+                    id: 1,
+                    title: "Added Favorite",
+                    text: $scope.dish.name
+                }).then(function () {
+                    console.log('Added Favorite '+$scope.dish.name);
+                },
+                function () {
+                    console.log('Failed to add Notification ');
+                });
+                // toast function show methord
+                $cordovaToast
+                  .show('Added Favorite '+$scope.dish.name, 'long', 'center')
+                  .then(function (success) {
+                      // success
+                  }, function (error) {
+                      // error
+                  });
+        });//close to $ionicPlatform ready
+            };//close to addtofav
             
                             
                                  
