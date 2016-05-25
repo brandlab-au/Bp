@@ -2,12 +2,18 @@ This angular.module('conFusion.controllers' [Ionic Framework]
 
 ## ngCordova
 '$ionicPlatform', '$cordovaLocalNotification', '$cordovaToast',
+
 ### See services ngResource
 angular.module('conFusion.services',['ngResource'])
 .constant("baseURL","http://localhost:3000/")
+
 ### MenuController
  - $scope.addFavorite -> services
- 
+
+### Picker
+- line 58
+-$scope.registration.imgSrc = "data:image/jpeg;base64," + results[i];
+
 ### DishDetailController needs add notif same as MeunCtr
 - line 308 added 
 - MenuController line 166 methord
@@ -15,6 +21,8 @@ angular.module('conFusion.services',['ngResource'])
 - on dish-detail-popover.html -> favoriteFactory Line 304
 - favoriteFactory.addToFavorites
 
+### FavoritesController Inj vibration
+-line 235
 
 ## localStorage
 

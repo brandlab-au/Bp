@@ -45,9 +45,9 @@ angular.module('conFusion.controllers', [])
         
          var pickerOptions = {
                maximumImagesCount: 10,
-               width: 800,
-               height: 800,
-               quality: 80
+               width: 100,
+               height: 100,
+               quality: 50
               };
         
         $scope.getGalery = function(){
@@ -55,6 +55,7 @@ angular.module('conFusion.controllers', [])
                 .then(function (results) {
                   for (var i = 0; i < results.length; i++) {
                     console.log('Image URI: ' + results[i]);
+                    $scope.registration.imgSrc = results[i];  
                   }
                 }, function(error) {// error getting photos
             });
@@ -342,7 +343,7 @@ angular.module('conFusion.controllers', [])
                 });
                 // toast function show methord
                 $cordovaToast
-                  .show('Added Favorite '+$scope.dish.name, 'long', 'center')
+                  .show('Added Favorite '+$scope.dish.name, 'long', 'bottom')
                   .then(function (success) {
                       // success
                   }, function (error) {
