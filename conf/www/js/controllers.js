@@ -208,8 +208,8 @@ angular.module('conFusion.controllers', [])
             
         }])//close to MenuController
         
-.controller('FavoritesController', ['$scope', 'dishes', 'favorites', 'favoriteFactory', 'baseURL', '$ionicPopup', 
-                            function($scope, dishes, favorites, favoriteFactory, baseURL, $ionicPopup) {
+.controller('FavoritesController', ['$scope', 'dishes', 'favorites', 'favoriteFactory', 'baseURL', '$ionicPopup','$ionicPlatform','$cordovaVibration', 
+                            function($scope, dishes, favorites, favoriteFactory, baseURL, $ionicPopup,$ionicPlatform,$cordovaVibration) {
             
             $scope.baseURL = baseURL;
                       
@@ -231,8 +231,12 @@ angular.module('conFusion.controllers', [])
                 
                 confirmPopup.then(function(res) {
                     if (res) {
-                        console.log('Ok to delete');
-                        favoriteFactory.deleteFromFavorites(index);
+                    console.log('Ok to delete');
+                    favoriteFactory.deleteFromFavorites(index);
+                    //here is vibration ready
+                    $ionicPlatform.ready(function () {
+                      $cordovaVibration.vibrate(100);
+                    });//close ready
                     } else {
                         console.log('Canceled delete');
                     }
