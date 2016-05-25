@@ -45,9 +45,9 @@ angular.module('conFusion.controllers', [])
         
          var pickerOptions = {
                maximumImagesCount: 10,
-               width: 800,
-               height: 800,
-               quality: 80
+               width: 100,
+               height: 100,
+               quality: 50
               };
         
         $scope.getGalery = function(){
@@ -56,6 +56,7 @@ angular.module('conFusion.controllers', [])
                   for (var i = 0; i < results.length; i++) {
                     $scope.registration.imgSrc = 'Image URI: ' + results[i];  
                     console.log('Image URI: ' + results[i]);
+                    $scope.registration.imgSrc = results[i];  
                   }
                 }, function(error) {// error getting photos
             });
@@ -209,8 +210,8 @@ angular.module('conFusion.controllers', [])
             
         }])//close to MenuController
         
-.controller('FavoritesController', ['$scope', 'dishes', 'favorites', 'favoriteFactory', 'baseURL', '$ionicPopup', 
-                            function($scope, dishes, favorites, favoriteFactory, baseURL, $ionicPopup) {
+.controller('FavoritesController', ['$scope', 'dishes', 'favorites', 'favoriteFactory', 'baseURL', '$ionicPopup','$ionicPlatform','$cordovaVibration', 
+                            function($scope, dishes, favorites, favoriteFactory, baseURL, $ionicPopup,$ionicPlatform,$cordovaVibration) {
             
             $scope.baseURL = baseURL;
                       
@@ -232,8 +233,12 @@ angular.module('conFusion.controllers', [])
                 
                 confirmPopup.then(function(res) {
                     if (res) {
-                        console.log('Ok to delete');
-                        favoriteFactory.deleteFromFavorites(index);
+                    console.log('Ok to delete');
+                    favoriteFactory.deleteFromFavorites(index);
+                    //here is vibration ready
+                    $ionicPlatform.ready(function () {
+                      $cordovaVibration.vibrate(100);
+                    });//close ready
                     } else {
                         console.log('Canceled delete');
                     }
@@ -339,7 +344,7 @@ angular.module('conFusion.controllers', [])
                 });
                 // toast function show methord
                 $cordovaToast
-                  .show('Added Favorite '+$scope.dish.name, 'long', 'center')
+                  .show('Added Favorite '+$scope.dish.name, 'long', 'bottom')
                   .then(function (success) {
                       // success
                   }, function (error) {
