@@ -53,7 +53,7 @@ angular.module('conFusion.controllers', [])
         $scope.getGalery = function(){
             $cordovaImagePicker.getPictures(pickerOptions)
                 .then(function (results) {
-                  for (var i = 0; i < results.length; i++) {
+                for (var i = 0; i < results.length; i++) {
                     $scope.registration.imgSrc = 'Image URI: ' + results[i];  
                     console.log('Image URI: ' + results[i]);
                     $scope.registration.imgSrc = results[i];  
