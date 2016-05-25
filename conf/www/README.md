@@ -2,6 +2,9 @@ This angular.module('conFusion.controllers' [Ionic Framework]
 
 ## ngCordova
 '$ionicPlatform', '$cordovaLocalNotification', '$cordovaToast',
+- getGalery() line 53
+- $cordovaLocalNotification line 186
+- $cordovaVibration line 239
 
 ### See services ngResource
 angular.module('conFusion.services',['ngResource'])
