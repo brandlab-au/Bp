@@ -2,10 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
-
 var hostname = 'localhost';
 var port = 3000;
-
+// server-4 you can use router the same as express
 var app = express();
 
 app.use(morgan('dev'));
