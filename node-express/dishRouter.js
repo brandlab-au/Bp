@@ -1,4 +1,10 @@
+
 module.exports = function (){
+    var express = require('express');
+    var bodyParser = require('body-parser');
+    var dishRouter = express.Router();
+    
+    dishRouter.use(bodyParser.json());
     dishRouter.route('/')
 .all(function(req,res,next) {
       res.writeHead(200, { 'Content-Type': 'text/plain' });
