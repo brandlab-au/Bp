@@ -1,0 +1,68 @@
+/* Front-end Billing and Shipping fields styling */
+
+#wppb-edit-user .wppb-woocommerce-customer-billing-address.wppb-field-error,
+#wppb-register-user .wppb-woocommerce-customer-billing-address.wppb-field-error,
+#wppb-edit-user .wppb-woocommerce-customer-shipping-address.wppb-field-error,
+#wppb-register-user .wppb-woocommerce-customer-shipping-address.wppb-field-error {
+    background-color: transparent !important;
+    border: 0px !important;
+}
+
+.wppb-woocommerce-customer-billing-address > span.wppb-form-error,
+.wppb-woocommerce-customer-shipping-address > span.wppb-form-error{
+    display:none;
+}
+
+#container_wppb_manage_fields .element_type_woocommerce-customer-shipping-address li.row-meta-name pre,
+#container_wppb_manage_fields .element_type_woocommerce-customer-billing-address li.row-meta-name pre{
+    visibility: hidden;
+}
+
+input#woo_different_shipping_address {
+    float:none;
+    margin-right:10px;
+    width: auto;
+}
+.wppb-shipping-different-address label {
+    width: auto;
+}
+
+/* Backend display of WooCommerce individual Billing and Shipping Address fields */
+
+.wck-woocheckboxes input.wck-woocheckbox-field-label {
+    border: none;
+    width: auto;
+    display: inline-block;
+    box-shadow:none;
+    font-size: 13px;
+    line-height: 1.2em;
+    border: 1px solid transparent;
+    transition: 0.2s ease-in-out all;
+}
+
+.wck-woocheckboxes input.wck-woocheckbox-field-label:hover, .wck-woocheckboxes input.wck-woocheckbox-field-label:focus{
+    background: #f7f7f7;
+    border-radius: 2px;
+    border: 1px solid #e6e6e6;
+}
+
+.wck-woocheckboxes .dashicons {
+    opacity: 0;
+    transition: 0.2s ease-in-out opacity;
+    margin:0 2px 0 3px;
+}
+
+.wck-woocheckboxes div > label:first-of-type{
+    margin-right: 20px;
+}
+
+.wck-woocheckboxes div > label:first-of-type:hover .dashicons {
+    opacity:0.6;
+}
+
+.wck-woocheckboxes-heading {
+    display: inline-block;
+    width: 245px;
+    font-weight: bold;
+    padding-left: 2px;
+}
