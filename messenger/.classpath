@@ -28,8 +28,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path=".classpath"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/web.xml"/>
-	<classpathentry kind="lib" path="src/main/webapp/index.jsp"/>
+	<classpathentry kind="lib" path="C:/Users/Francisco/eclipse/jars/sqljdbc_6.0/enu/jre8/sqljdbc42.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
