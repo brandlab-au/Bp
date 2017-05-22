@@ -7,6 +7,8 @@
 		<item value="github.com"/>
 	</list>
 	<list key="RepositorySelectionPage.UsedUris">
+		<item value="git://github.com/brandlab-au/Bp.git"/>
+		<item value="file:///C:\Users\CONTABILIDAD\Git"/>
 		<item value="https://github.com/brandlab-au/Bp.git"/>
 	</list>
 	<section name="GitImportWizard">
@@ -24,8 +26,8 @@
 		</section>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
-		<item value="200,200" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="500,500" key="STAGING_SASH_FORM_WEIGHT"/>
 		<item value="false" key="sortItemState"/>
-		<item value="200,200" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
 	</section>
 </section>
