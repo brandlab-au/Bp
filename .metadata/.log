@@ -1,0 +1,429 @@
+
+!ENTRY org.eclipse.core.resources 4 566 2017-05-15 14:20:22.355
+!MESSAGE Could not save master table to file '/Users/Jhon/GitHub/Bp/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources'.
+!STACK 0
+java.io.FileNotFoundException: /Users/Jhon/GitHub/Bp/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1286)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1277)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1254)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:20:22.654
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:20:22.656
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:20:22.656
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:20:22.656
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-05-15 14:20:48.130
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2017-05-15 14:21:01.229
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:21:12.117
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:21:12.118
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:21:12.118
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:21:12.118
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:21:18.920
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:21:18.921
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:21:18.921
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:21:18.921
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:21:28.697
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:21:28.697
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:21:28.697
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:21:28.698
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:21:38.662
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:21:38.662
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:21:38.662
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:21:38.662
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:22:04.703
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:22:04.703
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:22:04.703
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:22:04.703
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:22:08.104
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:22:08.105
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:22:08.105
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:22:08.105
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:22:19.821
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:22:19.822
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:22:19.822
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:22:19.822
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:22:25.592
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:22:25.592
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:22:25.592
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:22:25.592
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-15 14:22:29.260
+!MESSAGE Invalid project description.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Invalid project description.
+	at org.eclipse.core.internal.resources.Project.checkDescription(Project.java:169)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:53)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:263)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:247)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createExistingProject(ProjectUtils.java:180)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.access$0(ProjectUtils.java:141)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils$1.run(ProjectUtils.java:99)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2262)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:133)
+	at org.eclipse.egit.ui.internal.clone.ProjectUtils.createProjects(ProjectUtils.java:60)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:254)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:236)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: OK
+Contains: /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-05-15 14:22:29.260
+!MESSAGE Invalid project description.
+!SUBENTRY 2 unknown 0 0 2017-05-15 14:22:29.260
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2017-05-15 14:22:29.260
+!MESSAGE /Users/Jhon/GitHub/Bp overlaps the workspace location: /Users/Jhon/GitHub/Bp
+
+!ENTRY org.eclipse.core.resources 4 566 2017-05-15 14:25:22.975
+!MESSAGE Could not save master table to file '/Users/Jhon/GitHub/Bp/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources'.
+!STACK 0
+java.io.FileNotFoundException: /Users/Jhon/GitHub/Bp/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1286)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1277)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1254)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1165)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 566 2017-05-15 14:25:55.837
+!MESSAGE Could not save master table to file '/Users/Jhon/GitHub/Bp/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources.bak'.
+!STACK 0
+java.io.FileNotFoundException: /Users/Jhon/GitHub/Bp/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources.bak (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1286)
+	at org.eclipse.core.internal.resources.SaveManager.cleanMasterTable(SaveManager.java:234)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1195)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2283)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:456)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.ui.ide 4 4 2017-05-15 14:25:57.623
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2017-05-15 14:25:57.624
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 566 2017-05-15 14:25:57.624
+!MESSAGE Could not save master table to file '/Users/Jhon/GitHub/Bp/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources'.
+!STACK 0
+java.io.FileNotFoundException: /Users/Jhon/GitHub/Bp/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1286)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1277)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1254)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2283)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:456)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2017-05-15 14:26:04.521 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-15 14:26:21.893
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2017-05-15 14:28:15.521 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-15 14:28:26.785
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2017-05-15 15:21:30.714 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-15 15:21:46.367
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2017-05-15 15:32:29.340 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/Users/Jhon/GitHub/Bp/ -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-15 15:32:43.016
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2017-05-15 15:33:41.363 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-15 15:33:52.866
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2017-05-15 15:36:57.152 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-15 15:37:11.380
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2017-05-15 15:42:18.970 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/Users/Jhon/GitHub/Bp/ -product org.eclipse.epp.package.java.product -keyring /Users/Jhon/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-05-15 15:42:27.310
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
