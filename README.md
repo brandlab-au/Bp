@@ -1,6 +1,5 @@
 # BankOfProperties
 SQL
 
-Ok lets see if we can get this working. .
-Let try and post info to the server. 22/5/1
-ok here is a change 
+Ok I think this change will go on bicuit and this 
+is an older version of BP.

@@ -54,7 +54,6 @@ public class OrgLookup {
 	}
 
     public static void main (String [] args) {
-    	System.
         OrgLookup lookup = new OrgLookup();
         HashMap map = lookup.getEmployees();
         if (!map.isEmpty())
