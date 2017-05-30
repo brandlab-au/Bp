@@ -52,7 +52,7 @@ public class OrgLookup {
 	}
 
     public static void main (String [] args) {
-    	System.out.println("Test starting...")
+    	System.out.println("Test starting...");
         OrgLookup lookup = new OrgLookup();
         HashMap map = lookup.getEmployees();
         if (!map.isEmpty())

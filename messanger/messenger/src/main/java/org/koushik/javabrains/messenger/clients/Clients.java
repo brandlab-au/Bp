@@ -1,20 +1,23 @@
-package org.koushik.javabrains.messenger.resources;
+package org.koushik.javabrains.messenger.clients;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.GET;
 
-@Path("/messages")
-public class MessageResource {
-	
+@Path("/clients")
+public class Clients {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getMessages() {
-		return "hello world and raj don't forget Bis";
+		return "hello from the class clients";
 	}
 
+	
 }
 
 
+
+	
+	
 
